@@ -1,0 +1,11 @@
+stages:
+- name: docker build image
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: lpc/rancher-pipeline-test:v1
+      pushRemote: true
+      registry: index.docker.io
+timeout: 60
+notification: {}
