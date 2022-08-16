@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+      tag: test/test:1.0
       registry: index.docker.io
 - name: deploy
   steps:
